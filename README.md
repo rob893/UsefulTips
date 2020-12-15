@@ -29,6 +29,9 @@ This repository is simply a place for me to store useful information.
 - `sudo ufw allow {{ port }}/tcp` allow a port
 - `sudo ufw deny {{ port }}/tcp` deny a port
 - `sudo ufw status` port status
+- `sudo ufw allow from {{ ip }} to any port {{ port }}` allow ip to port
+- `sudo ufw status numbered` list all rules with numbered index (to be used to delete)
+- `sudo ufw delete {{ rule index }}` delete a firewall index
 
 ### Logs
 - `sudo journalctl -fu {{ service name }} --since "2016-10-18" --until "2016-10-18 04:00` View log for a service. Since and until optional. Can aluse use --since today and --until 1 hour ago
