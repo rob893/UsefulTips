@@ -9,6 +9,7 @@ This repository is simply a place for me to store useful information.
 - `sudo apt-get update` updates local database with package updates
 - `sudo apt-get upgrade` upgrades packages to match local database
 - `sudo apt-get install {{ package name }}` install a package
+- `sudo apt-get autoremove` remove old unused packages
 - `sudo apt remove {{ package name }}` uninstall a package
 - `sudo apt list --installed` list all installed packages
 - `sudo reboot` restart
@@ -33,6 +34,9 @@ This repository is simply a place for me to store useful information.
 - `sudo ufw allow {{ port }}/tcp` allow a port
 - `sudo ufw deny {{ port }}/tcp` deny a port
 - `sudo ufw status` port status
+- `sudo ufw allow from {{ ip }} to any port {{ port }}` allow ip to port
+- `sudo ufw status numbered` list all rules with numbered index (to be used to delete)
+- `sudo ufw delete {{ rule index }}` delete a firewall index
 
 ### Logs
 
