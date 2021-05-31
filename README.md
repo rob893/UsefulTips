@@ -64,3 +64,15 @@ NPM package used to manage node processes and create systemctl services https://
 - `pm2 logs {{ appname }}`
 - `pm2 flush` flush logs
 - `pm2 show {{ appname/id }}`
+
+### Docker
+
+- `docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' {container id/name}` get container ip
+- `docker pull {repo}/{image}{tag}` pull/update image
+- `docker logs --since 24h {container id/name}`
+- `docker container ls` list containers
+- `docker run --restart=always -d -p 127.0.0.1:{hostport}:{container port} --name {somename} -v {host filepath}:{container filepath} {image}` Run a container that will always restart and bind ports and use host volumn
+
+### Custom
+
+- I have a clean.sh script in ~(root)/projects. Run it with `./clean.sh`
